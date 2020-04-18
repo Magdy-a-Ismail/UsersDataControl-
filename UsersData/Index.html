@@ -1,9 +1,12 @@
 ﻿<html>
 <head>
     <title>Inline Table Add Edit Delete using AngularJS in PHP Mysql</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <link href="Content/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/CSS/bootstrap-rtl.min.css" rel="stylesheet" />
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="Content/Scripts/jquery.min.js"></script>
+    <script src="Content/Scripts/bootstrap.min.js"></script>
+    <script src="Content/Scripts/angular.js"></script>
     <script src="Content/Scripts/ui-bootstrap-tpls-0.12.1.min.js"></script>
     <script src="Content/Scripts/app.js"></script>
     <style>
@@ -26,16 +29,69 @@
             display: inline-block;
         }
     </style>
+    <nav class="navbar navbar-inverse">
+
+        <div class="">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">احصائيات وبيانات</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li style="margin-left:10px; margin-right:10px" class="active"><a href="#">الرئيسية <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+                <!--<form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>-->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 </head>
 <body >
     <div class="">
-        <br />
-        <h3 align="center">Inline Table Add Edit Delete using AngularJS in PHP Mysql</h3><br />
+      
         <div class="table-responsive" ng-app="liveApp" ng-controller="liveController" ng-init="fetchData()">
-            <div>
-                <input class="col-lg-2 form-control" type="text" ng-model="SearchValue"  placeholder="ادخل الاسم او رقم الملف" ng-required="true" />
+            <div style="margin:20px">
+                <input style="margin-left:20px" class="col-lg-3 form-control" type="text" ng-model="SearchValue"  placeholder="ادخل الاسم او رقم الملف" ng-required="true" />
    
-                <input class="btn btn-primary" type="button" ng-click="Search()" value="Search" />
+                <input class="btn btn-primary" type="button" ng-click="Search()" value="بحث" />
 
             </div>
 
@@ -55,8 +111,8 @@
                             <th ng-click="sortData('WomanName')"> <div ng-class="getSortClass('WomanName')"></div>اسم الزوجة</th>
                             <th ng-click="sortData('WomanAge')"> <div ng-class="getSortClass('WomanAge')"></div>العمر</th>
                             <th ng-click="sortData('Count')"> <div ng-class="getSortClass('Count')"></div>العدد</th>
-                            <th ng-click="sortData('Status')"> <div ng-class="getSortClass('Status')"></div>الحاله</th>
-                            <th > </th>
+                            <th ng-click="sortData('Status')"> <div ng-class="getSortClass('Status')"></div>الحالة</th>
+                            <th > اجراءات</th>
 
                         </tr>
                     </thead>

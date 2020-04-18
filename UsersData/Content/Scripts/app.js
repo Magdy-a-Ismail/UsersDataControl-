@@ -37,7 +37,7 @@ app.controller('liveController', function ($scope, $http, $filter) {
         $scope.insertData = function () {
             $http({
                 method: "POST",
-                url: "insert.php",
+                url: "//URl here",
                 data: $scope.addData,
             }).success(function (data) {
                 $scope.success = true;
@@ -54,7 +54,7 @@ app.controller('liveController', function ($scope, $http, $filter) {
         $scope.editData = function () {
             $http({
                 method: "POST",
-                url: "edit.php",
+                url: "//Url Here",
                 data: $scope.formData,
             }).success(function (data) {
                 $scope.success = true;
@@ -73,10 +73,10 @@ app.controller('liveController', function ($scope, $http, $filter) {
         };
 
         $scope.deleteData = function (id) {
-            if (confirm("Are you sure you want to remove it?")) {
+            if (confirm("هل متأكد انك تريد حذف هذا الحقل؟")) {
                 $http({
                     method: "POST",
-                    url: "delete.php",
+                    url: "//Url Here",
                     data: { 'id': id }
                 }).success(function (data) {
                     $scope.success = true;

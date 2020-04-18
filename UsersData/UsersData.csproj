@@ -39,15 +39,12 @@
   <ItemGroup>
     <Content Include="Content\CSS\bootstrap-rtl.min.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
-    <Content Include="Content\CSS\bootstrap_3_3_1.min.css" />
-    <Content Include="Content\CSS\styleFonts.css" />
     <Content Include="Content\Scripts\angular.js" />
-    <Content Include="Content\Scripts\angular_1_3_15.js" />
+    <Content Include="Content\Scripts\app_searchOnAPI.js" />
     <Content Include="Content\Scripts\app.js" />
-    <Content Include="Content\Scripts\script.js" />
-    <Content Include="Content\Scripts\smart-table.min.js" />
+    <Content Include="Content\Scripts\bootstrap.min.js" />
+    <Content Include="Content\Scripts\jquery.min.js" />
     <Content Include="Content\Scripts\ui-bootstrap-tpls-0.12.1.min.js" />
-    <Content Include="HTMLPage1.html" />
     <Content Include="Index.html" />
   </ItemGroup>
   <ItemGroup />
